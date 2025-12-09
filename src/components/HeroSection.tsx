@@ -23,39 +23,39 @@ const HeroSection = () => {
             <span className="text-primary-foreground text-sm font-medium">Trusted Traffic Management in SA</span>
           </div>
 
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-4 sm:mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
             Professional Traffic 
             <span className="block text-accent">Control Solutions</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-2xl animate-fade-up" style={{ animationDelay: "0.2s" }}>
+          <p className="text-base sm:text-lg md:text-xl text-primary-foreground/80 mb-6 sm:mb-8 max-w-2xl animate-fade-up" style={{ animationDelay: "0.2s" }}>
             AVD Traffic Solutions delivers comprehensive traffic management services across Adelaide and South Australia. 
             Safety-first approach with certified professionals ensuring smooth traffic flow for every project.
           </p>
 
-          <div className="flex flex-wrap gap-4 mb-12 animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            <Button variant="hero" size="xl">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12 animate-fade-up" style={{ animationDelay: "0.3s" }}>
+            <Button variant="hero" size="lg" className="w-full sm:w-auto">
               Request a Quote
               <ArrowRight className="w-5 h-5" />
             </Button>
-            <Button variant="heroOutline" size="xl">
+            <Button variant="heroOutline" size="lg" className="w-full sm:w-auto">
               Our Services
             </Button>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-6 max-w-lg animate-fade-up" style={{ animationDelay: "0.4s" }}>
+          <div className="grid grid-cols-3 gap-3 sm:gap-6 max-w-lg animate-fade-up" style={{ animationDelay: "0.4s" }}>
             <div className="text-center md:text-left">
-              <p className="font-display text-3xl md:text-4xl font-bold text-accent">500+</p>
-              <p className="text-primary-foreground/70 text-sm">Projects Completed</p>
+              <p className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-accent">500+</p>
+              <p className="text-primary-foreground/70 text-xs sm:text-sm">Projects Completed</p>
             </div>
             <div className="text-center md:text-left">
-              <p className="font-display text-3xl md:text-4xl font-bold text-accent">15+</p>
-              <p className="text-primary-foreground/70 text-sm">Years Experience</p>
+              <p className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-accent">15+</p>
+              <p className="text-primary-foreground/70 text-xs sm:text-sm">Years Experience</p>
             </div>
             <div className="text-center md:text-left">
-              <p className="font-display text-3xl md:text-4xl font-bold text-accent">100%</p>
-              <p className="text-primary-foreground/70 text-sm">Safety Record</p>
+              <p className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-accent">100%</p>
+              <p className="text-primary-foreground/70 text-xs sm:text-sm">Safety Record</p>
             </div>
           </div>
         </div>

@@ -42,21 +42,21 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-20 bg-background">
+    <section id="services" className="py-12 sm:py-16 md:py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
+          <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-3 sm:mb-4">
             What We Offer
           </span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
             Comprehensive Traffic Solutions
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-base sm:text-lg px-2">
             From small roadworks to major infrastructure projects, we provide end-to-end traffic management services tailored to your needs.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {services.map((service, index) => (
             <div
               key={service.title}
