@@ -12,14 +12,14 @@ const features = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 bg-secondary">
+    <section id="about" className="py-12 sm:py-16 md:py-20 bg-secondary">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div>
-            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+            <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-3 sm:mb-4">
               About AVD Traffic Solutions
             </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 sm:mb-6">
               Your Trusted Partner in Traffic Management
             </h2>
             <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
@@ -47,35 +47,35 @@ const AboutSection = () => {
             </Button>
           </div>
 
-          <div className="relative">
-            <div className="bg-primary rounded-2xl p-8 lg:p-12">
+          <div className="relative mt-8 lg:mt-0">
+            <div className="bg-primary rounded-2xl p-6 sm:p-8 lg:p-12">
               <div className="text-center text-primary-foreground">
-                <p className="font-display text-5xl md:text-6xl font-bold text-accent mb-2">15+</p>
-                <p className="text-xl mb-8">Years of Experience</p>
+                <p className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-accent mb-2">15+</p>
+                <p className="text-lg sm:text-xl mb-6 sm:mb-8">Years of Experience</p>
                 
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="bg-primary-foreground/10 rounded-xl p-6">
-                    <p className="font-display text-3xl font-bold text-accent">500+</p>
-                    <p className="text-sm text-primary-foreground/80">Projects Completed</p>
+                <div className="grid grid-cols-2 gap-3 sm:gap-6">
+                  <div className="bg-primary-foreground/10 rounded-xl p-4 sm:p-6">
+                    <p className="font-display text-2xl sm:text-3xl font-bold text-accent">500+</p>
+                    <p className="text-xs sm:text-sm text-primary-foreground/80">Projects Completed</p>
                   </div>
-                  <div className="bg-primary-foreground/10 rounded-xl p-6">
-                    <p className="font-display text-3xl font-bold text-accent">50+</p>
-                    <p className="text-sm text-primary-foreground/80">Team Members</p>
+                  <div className="bg-primary-foreground/10 rounded-xl p-4 sm:p-6">
+                    <p className="font-display text-2xl sm:text-3xl font-bold text-accent">50+</p>
+                    <p className="text-xs sm:text-sm text-primary-foreground/80">Team Members</p>
                   </div>
-                  <div className="bg-primary-foreground/10 rounded-xl p-6">
-                    <p className="font-display text-3xl font-bold text-accent">100%</p>
-                    <p className="text-sm text-primary-foreground/80">Safety Record</p>
+                  <div className="bg-primary-foreground/10 rounded-xl p-4 sm:p-6">
+                    <p className="font-display text-2xl sm:text-3xl font-bold text-accent">100%</p>
+                    <p className="text-xs sm:text-sm text-primary-foreground/80">Safety Record</p>
                   </div>
-                  <div className="bg-primary-foreground/10 rounded-xl p-6">
-                    <p className="font-display text-3xl font-bold text-accent">24/7</p>
-                    <p className="text-sm text-primary-foreground/80">Support Available</p>
+                  <div className="bg-primary-foreground/10 rounded-xl p-4 sm:p-6">
+                    <p className="font-display text-2xl sm:text-3xl font-bold text-accent">24/7</p>
+                    <p className="text-xs sm:text-sm text-primary-foreground/80">Support Available</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Decorative element */}
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent rounded-xl -z-10" />
+            <div className="absolute -bottom-4 -right-4 w-16 sm:w-24 h-16 sm:h-24 bg-accent rounded-xl -z-10" />
           </div>
         </div>
       </div>

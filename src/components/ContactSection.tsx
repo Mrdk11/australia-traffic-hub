@@ -26,21 +26,21 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-background">
+    <section id="contact" className="py-12 sm:py-16 md:py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
+          <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-3 sm:mb-4">
             Get in Touch
           </span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
             Contact Us Today
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-base sm:text-lg px-2">
             Ready to discuss your traffic management needs? Reach out for a free consultation and quote.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Info */}
           <div>
             <h3 className="font-display text-2xl font-bold text-foreground mb-6">
@@ -104,8 +104,8 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-card border border-border rounded-2xl p-8">
-            <h3 className="font-display text-2xl font-bold text-foreground mb-6">
+          <div className="bg-card border border-border rounded-2xl p-5 sm:p-8">
+            <h3 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-4 sm:mb-6">
               Request a Quote
             </h3>
             <form onSubmit={handleSubmit} className="space-y-5">
