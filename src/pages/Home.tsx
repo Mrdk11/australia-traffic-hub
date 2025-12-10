@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import HomeHighlights from "@/components/HomeHighlights";
 import Footer from "@/components/Footer";
-import MobileCallButton from "@/components/MobileCallButton";
 import PageTransition from "@/components/PageTransition";
 
 const Home = () => {
@@ -16,7 +15,6 @@ const Home = () => {
         </main>
       </PageTransition>
       <Footer />
-      <MobileCallButton />
     </div>
   );
 };
