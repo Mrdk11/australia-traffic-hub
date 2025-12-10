@@ -4,8 +4,11 @@ import {
   Shield, 
   Users, 
   FileCheck, 
-  Truck 
+  Truck,
+  AlertTriangle,
+  Signpost
 } from "lucide-react";
+import trafficEquipment from "@/assets/traffic-equipment.jpg";
 
 const services = [
   {
@@ -42,38 +45,77 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-12 sm:py-16 md:py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
-          <span className="inline-block text-accent font-semibold text-sm uppercase tracking-wider mb-3 sm:mb-4">
-            What We Offer
-          </span>
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3 sm:mb-4">
-            Comprehensive Traffic Solutions
+    <section id="services" className="py-16 sm:py-20 md:py-28 bg-background relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-10 w-32 h-32 border border-accent/20 rounded-full animate-pulse-glow opacity-30" />
+        <div className="absolute bottom-20 right-10 w-48 h-48 border border-cyan/20 rounded-full animate-pulse-glow opacity-30" style={{ animationDelay: "1s" }} />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Header */}
+        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-4 py-2 mb-4">
+            <Signpost className="w-4 h-4 text-accent animate-cone-bounce" />
+            <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+              What We Offer
+            </span>
+          </div>
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
+            Comprehensive Traffic 
+            <span className="text-accent"> Solutions</span>
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg px-2">
             From small roadworks to major infrastructure projects, we provide end-to-end traffic management services tailored to your needs.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        {/* Services Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="group bg-card border border-border rounded-xl p-6 hover:shadow-xl hover:border-accent/30 transition-all duration-300 hover:-translate-y-1"
+              className="group bg-card border border-border rounded-2xl p-6 sm:p-8 hover:shadow-xl hover:border-accent/50 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden animate-fade-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent transition-colors duration-300">
-                <service.icon className="w-7 h-7 text-accent group-hover:text-accent-foreground transition-colors duration-300" />
+              {/* Hover glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <div className="relative z-10">
+                <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-accent group-hover:shadow-neon transition-all duration-500">
+                  <service.icon className="w-7 h-7 text-accent group-hover:text-accent-foreground transition-colors duration-500" />
+                </div>
+                <h3 className="font-display text-xl sm:text-2xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors duration-300">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {service.description}
+                </p>
               </div>
-              <h3 className="font-display text-xl font-semibold text-foreground mb-2">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {service.description}
-              </p>
             </div>
           ))}
+        </div>
+
+        {/* Featured Image */}
+        <div className="relative rounded-3xl overflow-hidden group">
+          <img 
+            src={trafficEquipment} 
+            alt="Modern traffic control equipment" 
+            className="w-full h-64 sm:h-80 md:h-96 object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-10">
+            <div className="flex items-center gap-3 mb-3">
+              <AlertTriangle className="w-6 h-6 text-accent animate-traffic-lights" />
+              <span className="text-accent font-semibold uppercase tracking-wider text-sm">State-of-the-Art Equipment</span>
+            </div>
+            <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground mb-2">
+              Modern Traffic Solutions
+            </h3>
+            <p className="text-primary-foreground/80 max-w-xl text-sm sm:text-base">
+              We utilize the latest LED signage, electronic barriers, and smart traffic management systems.
+            </p>
+          </div>
         </div>
       </div>
     </section>
