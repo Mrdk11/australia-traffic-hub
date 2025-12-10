@@ -1,11 +1,7 @@
-import { Phone, Mail, MapPin, Facebook, Linkedin, Instagram, TrafficCone, ArrowUp } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Linkedin, Instagram, TrafficCone } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   return (
     <footer className="bg-primary text-primary-foreground relative overflow-hidden">
@@ -134,17 +130,9 @@ const Footer = () => {
             <p className="text-sm text-primary-foreground/60">
               © {currentYear} AVD Traffic Solutions. All rights reserved.
             </p>
-            <div className="flex items-center gap-4">
-              <p className="text-sm text-primary-foreground/60">
-                A division of AVDhut Group of Company
-              </p>
-              <button 
-                onClick={scrollToTop}
-                className="w-10 h-10 bg-accent rounded-xl flex items-center justify-center hover:shadow-neon transition-all duration-300 group"
-              >
-                <ArrowUp className="w-5 h-5 text-accent-foreground transition-transform group-hover:-translate-y-1" />
-              </button>
-            </div>
+            <p className="text-sm text-primary-foreground/60">
+              A division of AVDhut Group of Company
+            </p>
           </div>
         </div>
       </div>
