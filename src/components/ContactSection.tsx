@@ -59,20 +59,24 @@ const ContactSection = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-4 py-2 mb-4">
-            <MessageSquare className="w-4 h-4 text-accent animate-glow-pulse" />
-            <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-              Get in Touch
-            </span>
+        {/* Hero Banner at Top */}
+        <div className="relative rounded-3xl overflow-hidden mb-12 sm:mb-16 bg-primary">
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute -top-20 -right-20 w-60 h-60 bg-accent/20 rounded-full blur-[80px]" />
+            <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-cyan/20 rounded-full blur-[60px]" />
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Contact Us <span className="text-accent">Today</span>
-          </h2>
-          <p className="text-muted-foreground text-base sm:text-lg">
-            Ready to discuss your traffic management needs? Reach out for a free consultation and quote.
-          </p>
+          <div className="p-8 sm:p-12 relative z-10">
+            <div className="flex items-center gap-3 mb-4">
+              <MessageSquare className="w-6 h-6 text-accent animate-glow-pulse" />
+              <span className="text-accent font-semibold uppercase tracking-wider text-sm">Get In Touch</span>
+            </div>
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground mb-3">
+              Contact Us <span className="text-accent">Today</span>
+            </h2>
+            <p className="text-primary-foreground/80 max-w-xl text-sm sm:text-base">
+              Ready to discuss your traffic management needs? Reach out for a free consultation and quote.
+            </p>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">

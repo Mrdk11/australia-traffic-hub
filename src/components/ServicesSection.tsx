@@ -53,6 +53,28 @@ const ServicesSection = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
+        {/* Hero Image at Top */}
+        <div className="relative rounded-3xl overflow-hidden group mb-12 sm:mb-16">
+          <img 
+            src={trafficEquipment} 
+            alt="Modern traffic control equipment" 
+            className="w-full h-64 sm:h-80 md:h-96 object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-10">
+            <div className="flex items-center gap-3 mb-3">
+              <AlertTriangle className="w-6 h-6 text-accent animate-traffic-lights" />
+              <span className="text-accent font-semibold uppercase tracking-wider text-sm">State-of-the-Art Equipment</span>
+            </div>
+            <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground mb-2">
+              Modern Traffic Solutions
+            </h3>
+            <p className="text-primary-foreground/80 max-w-xl text-sm sm:text-base">
+              We utilize the latest LED signage, electronic barriers, and smart traffic management systems.
+            </p>
+          </div>
+        </div>
+
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-4 py-2 mb-4">
@@ -96,27 +118,6 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        {/* Featured Image */}
-        <div className="relative rounded-3xl overflow-hidden group">
-          <img 
-            src={trafficEquipment} 
-            alt="Modern traffic control equipment" 
-            className="w-full h-64 sm:h-80 md:h-96 object-cover transition-transform duration-700 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-10">
-            <div className="flex items-center gap-3 mb-3">
-              <AlertTriangle className="w-6 h-6 text-accent animate-traffic-lights" />
-              <span className="text-accent font-semibold uppercase tracking-wider text-sm">State-of-the-Art Equipment</span>
-            </div>
-            <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground mb-2">
-              Modern Traffic Solutions
-            </h3>
-            <p className="text-primary-foreground/80 max-w-xl text-sm sm:text-base">
-              We utilize the latest LED signage, electronic barriers, and smart traffic management systems.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );
