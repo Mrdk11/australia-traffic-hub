@@ -1,6 +1,8 @@
 import { CheckCircle2, Award, Clock, Users, Shield, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import trafficAerial from "@/assets/traffic-aerial.jpg";
+import trafficController from "@/assets/traffic-controller.jpg";
+import trafficEquipment from "@/assets/traffic-equipment.jpg";
 
 const features = [
   { text: "Fully licensed and insured operations", icon: Shield },
@@ -45,6 +47,43 @@ const AboutSection = () => {
             <p className="text-primary-foreground/80 max-w-xl text-sm sm:text-base">
               Years of expertise in Adelaide's traffic management industry.
             </p>
+          </div>
+        </div>
+
+        {/* Photo Gallery */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12 sm:mb-16">
+          <div className="relative rounded-2xl overflow-hidden group aspect-[4/3]">
+            <img 
+              src={trafficController} 
+              alt="Traffic controller at work" 
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <p className="text-primary-foreground font-semibold text-sm">Professional Controllers</p>
+            </div>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden group aspect-[4/3]">
+            <img 
+              src={trafficEquipment} 
+              alt="Traffic control equipment" 
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <p className="text-primary-foreground font-semibold text-sm">Modern Equipment</p>
+            </div>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden group aspect-[4/3] col-span-2 md:col-span-1">
+            <img 
+              src={trafficAerial} 
+              alt="Aerial traffic management view" 
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <p className="text-primary-foreground font-semibold text-sm">Project Management</p>
+            </div>
           </div>
         </div>
 
