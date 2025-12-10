@@ -1,19 +1,13 @@
 import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import ServicesSection from "@/components/ServicesSection";
-import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import MobileCallButton from "@/components/MobileCallButton";
 
-const Index = () => {
+const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main>
-        <HeroSection />
-        <ServicesSection />
-        <AboutSection />
+      <main className="pt-28 sm:pt-32">
         <ContactSection />
       </main>
       <Footer />
@@ -22,4 +16,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Contact;
