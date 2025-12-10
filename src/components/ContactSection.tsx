@@ -2,6 +2,7 @@ import { Phone, Mail, MapPin, Clock, Send, MessageSquare, Zap } from "lucide-rea
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import trafficController from "@/assets/traffic-controller.jpg";
 
 const contactInfo = [
   {
@@ -59,18 +60,20 @@ const ContactSection = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Hero Banner at Top */}
-        <div className="relative rounded-3xl overflow-hidden mb-12 sm:mb-16 bg-primary">
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute -top-20 -right-20 w-60 h-60 bg-accent/20 rounded-full blur-[80px]" />
-            <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-cyan/20 rounded-full blur-[60px]" />
-          </div>
-          <div className="p-8 sm:p-12 relative z-10">
-            <div className="flex items-center gap-3 mb-4">
+        {/* Hero Image at Top */}
+        <div className="relative rounded-3xl overflow-hidden mb-12 sm:mb-16 group">
+          <img 
+            src={trafficController} 
+            alt="Traffic controller ready to assist" 
+            className="w-full h-64 sm:h-80 md:h-96 object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-10">
+            <div className="flex items-center gap-3 mb-3">
               <MessageSquare className="w-6 h-6 text-accent animate-glow-pulse" />
               <span className="text-accent font-semibold uppercase tracking-wider text-sm">Get In Touch</span>
             </div>
-            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground mb-3">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground mb-2">
               Contact Us <span className="text-accent">Today</span>
             </h2>
             <p className="text-primary-foreground/80 max-w-xl text-sm sm:text-base">
