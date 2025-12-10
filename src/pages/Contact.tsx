@@ -2,14 +2,17 @@ import Header from "@/components/Header";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import MobileCallButton from "@/components/MobileCallButton";
+import PageTransition from "@/components/PageTransition";
 
 const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="pt-28 sm:pt-32">
-        <ContactSection />
-      </main>
+      <PageTransition>
+        <main className="pt-28 sm:pt-32">
+          <ContactSection />
+        </main>
+      </PageTransition>
       <Footer />
       <MobileCallButton />
     </div>
