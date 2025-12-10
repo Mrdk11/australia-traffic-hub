@@ -7,15 +7,15 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1rem",
       screens: {
         "2xl": "1400px",
       },
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        display: ['Outfit', 'sans-serif'],
+        sans: ['Space Grotesk', 'sans-serif'],
+        display: ['Rajdhani', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -60,6 +60,10 @@ export default {
           DEFAULT: "hsl(var(--orange))",
           light: "hsl(var(--orange-light))",
           dark: "hsl(var(--orange-dark))",
+        },
+        cyan: {
+          DEFAULT: "hsl(var(--cyan))",
+          light: "hsl(var(--cyan-light))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
