@@ -1,17 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, TrafficCone, Zap } from "lucide-react";
-import heroImage from "@/assets/traffic-night.jpg";
+import HeroSlider from "./HeroSlider";
 
 const HeroSection = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-28 sm:pt-32 pb-20 overflow-hidden">
-      {/* Background image with futuristic overlay */}
+      {/* Background slider with futuristic overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroImage} 
-          alt="Traffic management professionals at work" 
-          className="w-full h-full object-cover"
-        />
+        <HeroSlider />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/98 via-primary/85 to-primary/60" />
         <div className="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-80" />
         
