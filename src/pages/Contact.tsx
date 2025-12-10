@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-import MobileCallButton from "@/components/MobileCallButton";
 import PageTransition from "@/components/PageTransition";
 
 const Contact = () => {
@@ -14,7 +13,6 @@ const Contact = () => {
         </main>
       </PageTransition>
       <Footer />
-      <MobileCallButton />
     </div>
   );
 };

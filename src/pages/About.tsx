@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import AboutSection from "@/components/AboutSection";
 import Footer from "@/components/Footer";
-import MobileCallButton from "@/components/MobileCallButton";
 import PageTransition from "@/components/PageTransition";
 
 const About = () => {
@@ -14,7 +13,6 @@ const About = () => {
         </main>
       </PageTransition>
       <Footer />
-      <MobileCallButton />
     </div>
   );
 };

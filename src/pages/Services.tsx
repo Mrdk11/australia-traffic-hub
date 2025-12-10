@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import ServicesSection from "@/components/ServicesSection";
 import Footer from "@/components/Footer";
-import MobileCallButton from "@/components/MobileCallButton";
 import PageTransition from "@/components/PageTransition";
 
 const Services = () => {
@@ -14,7 +13,6 @@ const Services = () => {
         </main>
       </PageTransition>
       <Footer />
-      <MobileCallButton />
     </div>
   );
 };
