@@ -1,16 +1,20 @@
 import { Phone, Mail, MapPin, Menu, X, TrafficCone } from "lucide-react";
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "Services", href: "#services" },
-    { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", href: "/" },
+    { label: "Services", href: "/services" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
   ];
+
+  const isActive = (href: string) => location.pathname === href;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass">
@@ -37,7 +41,7 @@ const Header = () => {
       {/* Main nav */}
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          <a href="#home" className="flex items-center gap-2 sm:gap-3">
+          <Link to="/" className="flex items-center gap-2 sm:gap-3">
             {/* Logo with animated traffic cone */}
             <div className="relative w-10 h-10 sm:w-12 sm:h-12 bg-accent rounded-lg flex items-center justify-center animate-pulse-glow">
               <TrafficCone className="w-5 h-5 sm:w-6 sm:h-6 text-accent-foreground animate-cone-bounce" />
@@ -46,26 +50,32 @@ const Header = () => {
               <p className="font-display font-bold text-foreground text-sm sm:text-lg leading-tight">AVD Traffic</p>
               <p className="text-muted-foreground text-[10px] sm:text-xs uppercase tracking-wider">Solutions</p>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
-                className="font-medium text-foreground hover:text-accent transition-all duration-300 relative group"
+                to={item.href}
+                className={`font-medium transition-all duration-300 relative group ${
+                  isActive(item.href) ? "text-accent" : "text-foreground hover:text-accent"
+                }`}
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
-              </a>
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-accent transition-all duration-300 ${
+                  isActive(item.href) ? "w-full" : "w-0 group-hover:w-full"
+                }`} />
+              </Link>
             ))}
           </nav>
 
           <div className="hidden md:block">
-            <Button variant="accent" size="lg" className="shadow-neon">
-              Get a Quote
-            </Button>
+            <Link to="/contact">
+              <Button variant="accent" size="lg" className="shadow-neon">
+                Get a Quote
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -82,19 +92,23 @@ const Header = () => {
           <div className="md:hidden py-4 border-t border-border animate-fade-in">
             <nav className="flex flex-col gap-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.label}
-                  href={item.href}
-                  className="font-medium text-foreground hover:text-accent transition-colors py-2 flex items-center gap-3"
+                  to={item.href}
+                  className={`font-medium transition-colors py-2 flex items-center gap-3 ${
+                    isActive(item.href) ? "text-accent" : "text-foreground hover:text-accent"
+                  }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <span className="w-1 h-1 rounded-full bg-accent" />
+                  <span className={`w-1 h-1 rounded-full ${isActive(item.href) ? "bg-accent" : "bg-muted-foreground"}`} />
                   {item.label}
-                </a>
+                </Link>
               ))}
-              <Button variant="accent" className="mt-2 shadow-neon">
-                Get a Quote
-              </Button>
+              <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+                <Button variant="accent" className="mt-2 shadow-neon w-full">
+                  Get a Quote
+                </Button>
+              </Link>
             </nav>
           </div>
         )}
