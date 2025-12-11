@@ -5,7 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import trafficEquipment from "@/assets/traffic-equipment.jpg";
+import trafficConsultation from "@/assets/traffic-consultation.jpg";
 
 const faqs = [
   {
@@ -55,8 +55,8 @@ const FAQSection = () => {
         {/* Hero Image at Top */}
         <div className="relative rounded-3xl overflow-hidden mb-12 sm:mb-16 group">
           <img 
-            src={trafficEquipment} 
-            alt="Traffic management equipment and services" 
+            src={trafficConsultation} 
+            alt="Customer consultation about traffic management services" 
             className="w-full h-64 sm:h-80 md:h-96 object-cover transition-transform duration-700 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent" />
