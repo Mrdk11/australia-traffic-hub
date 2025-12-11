@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import HomeHighlights from "@/components/HomeHighlights";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
 
@@ -12,6 +13,7 @@ const Home = () => {
         <main>
           <HeroSection />
           <HomeHighlights />
+          <TestimonialsSection />
         </main>
       </PageTransition>
       <Footer />
