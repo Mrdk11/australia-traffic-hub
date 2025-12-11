@@ -4,6 +4,9 @@ import trafficNight from "@/assets/traffic-night.jpg";
 import trafficAerial from "@/assets/traffic-aerial.jpg";
 import trafficEquipment from "@/assets/traffic-equipment.jpg";
 import trafficController from "@/assets/traffic-controller.jpg";
+import trafficHighway from "@/assets/traffic-highway.jpg";
+import trafficUrban from "@/assets/traffic-urban.jpg";
+import trafficSetup from "@/assets/traffic-setup.jpg";
 
 const slides = [
   {
@@ -11,12 +14,24 @@ const slides = [
     alt: "Traffic management at night",
   },
   {
+    image: trafficHighway,
+    alt: "Highway traffic control operations",
+  },
+  {
     image: trafficController,
     alt: "Traffic controller at work",
   },
   {
+    image: trafficUrban,
+    alt: "Urban intersection traffic management",
+  },
+  {
     image: trafficAerial,
     alt: "Aerial view of traffic management",
+  },
+  {
+    image: trafficSetup,
+    alt: "Traffic control equipment setup",
   },
   {
     image: trafficEquipment,
