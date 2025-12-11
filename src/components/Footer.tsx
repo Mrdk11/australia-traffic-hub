@@ -1,7 +1,16 @@
 import { Phone, Mail, MapPin, Facebook, Linkedin, Instagram, TrafficCone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  const quickLinks = [
+    { label: "Home", href: "/" },
+    { label: "Services", href: "/services" },
+    { label: "About Us", href: "/about" },
+    { label: "Contact", href: "/contact" },
+    { label: "Get a Quote", href: "/contact" },
+  ];
 
   return (
     <footer className="bg-primary text-primary-foreground relative overflow-hidden">
@@ -48,15 +57,15 @@ const Footer = () => {
               Quick Links
             </h4>
             <ul className="space-y-3">
-              {["Home", "Services", "About Us", "Contact", "Get a Quote"].map((link) => (
-                <li key={link}>
-                  <a 
-                    href={`#${link.toLowerCase().replace(" ", "-")}`} 
+              {quickLinks.map((link) => (
+                <li key={link.label}>
+                  <Link 
+                    to={link.href} 
                     className="text-primary-foreground/70 hover:text-accent transition-colors flex items-center gap-2 group text-sm"
                   >
                     <span className="w-0 h-px bg-accent transition-all duration-300 group-hover:w-3" />
-                    {link}
-                  </a>
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -77,13 +86,13 @@ const Footer = () => {
                 "Equipment Hire",
               ].map((service) => (
                 <li key={service}>
-                  <a 
-                    href="#services" 
+                  <Link 
+                    to="/services" 
                     className="text-primary-foreground/70 hover:text-accent transition-colors flex items-center gap-2 group text-sm"
                   >
                     <span className="w-0 h-px bg-accent transition-all duration-300 group-hover:w-3" />
                     {service}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

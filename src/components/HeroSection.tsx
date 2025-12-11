@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, TrafficCone, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
 import HeroSlider from "./HeroSlider";
 
 const HeroSection = () => {
@@ -40,13 +41,17 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10 sm:mb-14 animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            <Button variant="hero" size="lg" className="w-full sm:w-auto group shadow-neon">
-              Request a Quote
-              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Button variant="heroOutline" size="lg" className="w-full sm:w-auto">
-              Our Services
-            </Button>
+            <Link to="/contact">
+              <Button variant="hero" size="lg" className="w-full sm:w-auto group shadow-neon">
+                Request a Quote
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
+            <Link to="/services">
+              <Button variant="heroOutline" size="lg" className="w-full sm:w-auto">
+                Our Services
+              </Button>
+            </Link>
           </div>
 
           {/* Futuristic Stats */}
