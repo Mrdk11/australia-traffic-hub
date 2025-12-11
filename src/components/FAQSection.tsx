@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import trafficEquipment from "@/assets/traffic-equipment.jpg";
 
 const faqs = [
   {
@@ -51,20 +52,26 @@ const FAQSection = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-4 py-2 mb-4">
-            <HelpCircle className="w-4 h-4 text-accent" />
-            <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-              FAQ
-            </span>
+        {/* Hero Image at Top */}
+        <div className="relative rounded-3xl overflow-hidden mb-12 sm:mb-16 group">
+          <img 
+            src={trafficEquipment} 
+            alt="Traffic management equipment and services" 
+            className="w-full h-64 sm:h-80 md:h-96 object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-10">
+            <div className="flex items-center gap-3 mb-3">
+              <HelpCircle className="w-6 h-6 text-accent animate-glow-pulse" />
+              <span className="text-accent font-semibold uppercase tracking-wider text-sm">FAQ</span>
+            </div>
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-primary-foreground mb-2">
+              Frequently Asked <span className="text-accent">Questions</span>
+            </h2>
+            <p className="text-primary-foreground/80 max-w-xl text-sm sm:text-base">
+              Find answers to common questions about our traffic management services.
+            </p>
           </div>
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Frequently Asked <span className="text-accent">Questions</span>
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Find answers to common questions about our traffic management services.
-          </p>
         </div>
 
         {/* FAQ Accordion */}
