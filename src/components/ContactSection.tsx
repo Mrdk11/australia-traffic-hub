@@ -1,8 +1,14 @@
-import { Phone, Mail, MapPin, Clock, Send, MessageSquare, Zap, Loader2 } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, MessageSquare, Zap, Loader2, CheckCircle2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import trafficController from "@/assets/traffic-controller.jpg";
 
 const contactSchema = z.object({
@@ -45,7 +51,6 @@ const contactInfo = [
 ];
 
 const ContactSection = () => {
-  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -54,6 +59,8 @@ const ContactSection = () => {
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [submittedName, setSubmittedName] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -80,12 +87,10 @@ const ContactSection = () => {
     // Simulate processing delay
     await new Promise(resolve => setTimeout(resolve, 1000));
     
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
+    setSubmittedName(formData.name);
     setFormData({ name: "", email: "", phone: "", message: "" });
     setIsSubmitting(false);
+    setShowSuccessModal(true);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -98,7 +103,42 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-16 sm:py-20 md:py-28 bg-background relative overflow-hidden">
+    <>
+      {/* Success Modal */}
+      <Dialog open={showSuccessModal} onOpenChange={setShowSuccessModal}>
+        <DialogContent className="sm:max-w-md border-accent/20 bg-card">
+          <DialogHeader className="text-center sm:text-center">
+            <div className="mx-auto mb-4 w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center animate-scale-in">
+              <CheckCircle2 className="w-8 h-8 text-accent" />
+            </div>
+            <DialogTitle className="text-2xl font-display text-foreground">
+              Message Sent Successfully!
+            </DialogTitle>
+            <DialogDescription className="text-muted-foreground mt-2">
+              Thank you, {submittedName}! We've received your inquiry and will get back to you within 24 hours.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="mt-6 space-y-3">
+            <div className="p-4 rounded-xl bg-accent/5 border border-accent/10">
+              <p className="text-sm text-muted-foreground text-center">
+                For urgent matters, call us directly at{" "}
+                <a href="tel:+61412345678" className="text-accent font-semibold hover:underline">
+                  +61 4 1234 5678
+                </a>
+              </p>
+            </div>
+            <Button
+              variant="accent"
+              className="w-full shadow-neon"
+              onClick={() => setShowSuccessModal(false)}
+            >
+              Close
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      <section id="contact" className="py-16 sm:py-20 md:py-28 bg-background relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-[120px]" />
@@ -273,7 +313,8 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 };
 
