@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock, Send, MessageSquare, Zap } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, MessageSquare, Zap, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -53,8 +53,9 @@ const ContactSection = () => {
     message: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Validate form data
@@ -74,11 +75,17 @@ const ContactSection = () => {
     }
     
     setErrors({});
+    setIsSubmitting(true);
+    
+    // Simulate processing delay
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
     toast({
       title: "Message Sent!",
       description: "We'll get back to you within 24 hours.",
     });
     setFormData({ name: "", email: "", phone: "", message: "" });
+    setIsSubmitting(false);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -247,9 +254,18 @@ const ContactSection = () => {
                     {errors.message && <p className="text-destructive text-sm mt-1">{errors.message}</p>}
                   </div>
 
-                  <Button type="submit" variant="accent" size="lg" className="w-full shadow-neon group">
-                    Send Message
-                    <Send className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  <Button type="submit" variant="accent" size="lg" className="w-full shadow-neon group" disabled={isSubmitting}>
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Send Message
+                        <Send className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                      </>
+                    )}
                   </Button>
                 </form>
               </div>
