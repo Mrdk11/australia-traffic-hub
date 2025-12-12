@@ -2,7 +2,22 @@ import { Phone, Mail, MapPin, Clock, Send, MessageSquare, Zap } from "lucide-rea
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { z } from "zod";
 import trafficController from "@/assets/traffic-controller.jpg";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(2, "Name must be at least 2 characters").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().email("Please enter a valid email address").max(255, "Email must be less than 255 characters"),
+  phone: z.string().trim().regex(/^(\+?61|0)?[2-9]\d{8}$|^(\+?61|0)?4\d{8}$|^$/, "Please enter a valid Australian phone number (e.g., 0400 000 000)").optional().or(z.literal("")),
+  message: z.string().trim().min(10, "Message must be at least 10 characters").max(1000, "Message must be less than 1000 characters"),
+});
+
+type FormErrors = {
+  name?: string;
+  email?: string;
+  phone?: string;
+  message?: string;
+};
 
 const contactInfo = [
   {
@@ -37,9 +52,28 @@ const ContactSection = () => {
     phone: "",
     message: "",
   });
+  const [errors, setErrors] = useState<FormErrors>({});
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate form data
+    const result = contactSchema.safeParse({
+      ...formData,
+      phone: formData.phone.replace(/\s/g, ""), // Remove spaces for validation
+    });
+    
+    if (!result.success) {
+      const fieldErrors: FormErrors = {};
+      result.error.errors.forEach((error) => {
+        const field = error.path[0] as keyof FormErrors;
+        fieldErrors[field] = error.message;
+      });
+      setErrors(fieldErrors);
+      return;
+    }
+    
+    setErrors({});
     toast({
       title: "Message Sent!",
       description: "We'll get back to you within 24 hours.",
@@ -48,7 +82,12 @@ const ContactSection = () => {
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    // Clear error when user starts typing
+    if (errors[name as keyof FormErrors]) {
+      setErrors({ ...errors, [name]: undefined });
+    }
   };
 
   return (
@@ -145,7 +184,7 @@ const ContactSection = () => {
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                      Full Name
+                      Full Name <span className="text-destructive">*</span>
                     </label>
                     <input
                       type="text"
@@ -153,16 +192,16 @@ const ContactSection = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 rounded-xl border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all placeholder:text-muted-foreground"
+                      className={`w-full px-4 py-3 rounded-xl border ${errors.name ? 'border-destructive' : 'border-input'} bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all placeholder:text-muted-foreground`}
                       placeholder="Your name"
                     />
+                    {errors.name && <p className="text-destructive text-sm mt-1">{errors.name}</p>}
                   </div>
 
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                        Email
+                        Email <span className="text-destructive">*</span>
                       </label>
                       <input
                         type="email"
@@ -170,10 +209,10 @@ const ContactSection = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 rounded-xl border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all placeholder:text-muted-foreground"
+                        className={`w-full px-4 py-3 rounded-xl border ${errors.email ? 'border-destructive' : 'border-input'} bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all placeholder:text-muted-foreground`}
                         placeholder="you@email.com"
                       />
+                      {errors.email && <p className="text-destructive text-sm mt-1">{errors.email}</p>}
                     </div>
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
@@ -185,26 +224,27 @@ const ContactSection = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-xl border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all placeholder:text-muted-foreground"
+                        className={`w-full px-4 py-3 rounded-xl border ${errors.phone ? 'border-destructive' : 'border-input'} bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all placeholder:text-muted-foreground`}
                         placeholder="0400 000 000"
                       />
+                      {errors.phone && <p className="text-destructive text-sm mt-1">{errors.phone}</p>}
                     </div>
                   </div>
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                      Project Details
+                      Project Details <span className="text-destructive">*</span>
                     </label>
                     <textarea
                       id="message"
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      required
                       rows={4}
-                      className="w-full px-4 py-3 rounded-xl border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all resize-none placeholder:text-muted-foreground"
+                      className={`w-full px-4 py-3 rounded-xl border ${errors.message ? 'border-destructive' : 'border-input'} bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all resize-none placeholder:text-muted-foreground`}
                       placeholder="Tell us about your project..."
                     />
+                    {errors.message && <p className="text-destructive text-sm mt-1">{errors.message}</p>}
                   </div>
 
                   <Button type="submit" variant="accent" size="lg" className="w-full shadow-neon group">
