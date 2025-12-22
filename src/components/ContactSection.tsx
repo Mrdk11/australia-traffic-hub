@@ -201,21 +201,6 @@ const ContactSection = () => {
               ))}
             </div>
 
-            {/* Google Maps */}
-            <div className="mt-6 rounded-2xl overflow-hidden border border-border">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.7!2d138.5969!3d-34.8461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab0c8d5a5b8b8b9%3A0x1234567890abcdef!2s647%20Grand%20Junction%20Rd%2C%20Gepps%20Cross%20SA%205094!5e0!3m2!1sen!2sau!4v1703000000000!5m2!1sen!2sau"
-                width="100%"
-                height="200"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="AVD Traffic Solutions Location"
-                className="grayscale hover:grayscale-0 transition-all duration-500"
-              />
-            </div>
-
             {/* Emergency callout */}
             <div className="mt-6 p-5 rounded-2xl bg-primary text-primary-foreground border border-accent/20 relative overflow-hidden">
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-accent/20 rounded-full blur-[40px]" />
