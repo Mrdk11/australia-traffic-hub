@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Facebook, Linkedin, Instagram, TrafficCone } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Facebook, Linkedin, Instagram, TrafficCone } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -106,11 +106,11 @@ const Footer = () => {
             </h4>
             <ul className="space-y-4">
               <li>
-                <a href="tel:+61412345678" className="flex items-start gap-3 group">
+                <a href="tel:1300283832" className="flex items-start gap-3 group">
                   <div className="w-8 h-8 bg-primary-foreground/10 rounded-lg flex items-center justify-center group-hover:bg-accent transition-all duration-300">
                     <Phone className="w-4 h-4 text-accent group-hover:text-accent-foreground transition-colors" />
                   </div>
-                  <span className="text-primary-foreground/80 group-hover:text-accent transition-colors text-sm mt-1">+61 4 1234 5678</span>
+                  <span className="text-primary-foreground/80 group-hover:text-accent transition-colors text-sm mt-1">1300 283 832</span>
                 </a>
               </li>
               <li>
@@ -125,7 +125,13 @@ const Footer = () => {
                 <div className="w-8 h-8 bg-primary-foreground/10 rounded-lg flex items-center justify-center">
                   <MapPin className="w-4 h-4 text-accent" />
                 </div>
-                <span className="text-primary-foreground/80 text-sm mt-1">Adelaide, South Australia</span>
+                <span className="text-primary-foreground/80 text-sm mt-1">647 Grand Junction Rd, Gepps Cross, SA, 5094</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-8 h-8 bg-primary-foreground/10 rounded-lg flex items-center justify-center">
+                  <Clock className="w-4 h-4 text-accent" />
+                </div>
+                <span className="text-primary-foreground/80 text-sm mt-1">Mon-Fri: 9AM to 5PM</span>
               </li>
             </ul>
           </div>
