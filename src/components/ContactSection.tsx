@@ -29,8 +29,8 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    content: "+61 4 1234 5678",
-    href: "tel:+61412345678",
+    content: "1300 283 832",
+    href: "tel:1300283832",
   },
   {
     icon: Mail,
@@ -41,12 +41,12 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Address",
-    content: "Adelaide, South Australia",
+    content: "647 Grand Junction Rd, Gepps Cross, SA, 5094",
   },
   {
     icon: Clock,
     title: "Business Hours",
-    content: "Mon-Fri: 7AM-6PM • 24/7 Emergency",
+    content: "Mon-Fri: 9AM to 5PM",
   },
 ];
 
@@ -122,8 +122,8 @@ const ContactSection = () => {
             <div className="p-4 rounded-xl bg-accent/5 border border-accent/10">
               <p className="text-sm text-muted-foreground text-center">
                 For urgent matters, call us directly at{" "}
-                <a href="tel:+61412345678" className="text-accent font-semibold hover:underline">
-                  +61 4 1234 5678
+                <a href="tel:1300283832" className="text-accent font-semibold hover:underline">
+                  1300 283 832
                 </a>
               </p>
             </div>

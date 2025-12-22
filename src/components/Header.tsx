@@ -10,7 +10,6 @@ const Header = () => {
   const navItems = [
     { label: "Home", href: "/" },
     { label: "Services", href: "/services" },
-    { label: "Projects", href: "/projects" },
     { label: "About", href: "/about" },
     { label: "FAQ", href: "/faq" },
     { label: "Contact", href: "/contact" },
@@ -24,9 +23,9 @@ const Header = () => {
       <div className="bg-primary text-primary-foreground py-2">
         <div className="container mx-auto px-4 flex flex-wrap justify-between items-center text-xs sm:text-sm">
           <div className="flex items-center gap-3 sm:gap-6">
-            <a href="tel:+61412345678" className="flex items-center gap-1 sm:gap-2 hover:text-accent transition-colors">
+            <a href="tel:1300283832" className="flex items-center gap-1 sm:gap-2 hover:text-accent transition-colors">
               <Phone className="w-3 h-3 sm:w-4 sm:h-4" />
-              <span className="hidden xs:inline sm:inline">+61 4 1234 5678</span>
+              <span className="hidden xs:inline sm:inline">1300 283 832</span>
             </a>
             <a href="mailto:info@avdtraffic.com.au" className="hidden sm:flex items-center gap-2 hover:text-accent transition-colors">
               <Mail className="w-4 h-4" />
@@ -35,7 +34,7 @@ const Header = () => {
           </div>
           <div className="flex items-center gap-1 sm:gap-2">
             <MapPin className="w-3 h-3 sm:w-4 sm:h-4" />
-            <span className="text-xs sm:text-sm">Adelaide, SA</span>
+            <span className="text-xs sm:text-sm">Gepps Cross, SA</span>
           </div>
         </div>
       </div>
