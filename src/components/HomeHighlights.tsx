@@ -60,14 +60,14 @@ const HomeHighlights = () => {
                 From small roadworks to major infrastructure projects, we provide end-to-end traffic management services.
               </p>
 
-              <div className="grid sm:grid-cols-3 gap-4 mb-6">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-6">
                 {services.map((service, index) => (
                   <div 
                     key={service.title}
                     className="flex items-center gap-3 p-3 rounded-xl bg-background/50 border border-border group-hover:border-accent/30 transition-all duration-300"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                    <div className="w-10 h-10 flex-shrink-0 rounded-lg bg-accent/10 flex items-center justify-center">
                       <service.icon className="w-5 h-5 text-accent" />
                     </div>
                     <span className="text-foreground text-sm font-medium">{service.title}</span>

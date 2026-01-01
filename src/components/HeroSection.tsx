@@ -55,19 +55,19 @@ const HeroSection = () => {
           </div>
 
           {/* Futuristic Stats */}
-          <div className="grid grid-cols-3 gap-3 sm:gap-6 max-w-lg animate-fade-up" style={{ animationDelay: "0.4s" }}>
+          <div className="grid grid-cols-3 gap-2 sm:gap-6 max-w-lg animate-fade-up" style={{ animationDelay: "0.4s" }}>
             {[
-              { value: "500+", label: "Projects Completed", icon: Zap },
-              { value: "15+", label: "Years Experience", icon: TrafficCone },
+              { value: "5+", label: "Projects Completed", icon: Zap },
+              { value: "1+", label: "Years Experience", icon: TrafficCone },
               { value: "100%", label: "Safety Record", icon: Shield },
             ].map((stat, index) => (
               <div 
                 key={stat.label} 
-                className="relative group text-center md:text-left p-3 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10 backdrop-blur-sm hover:border-accent/50 transition-all duration-300"
+                className="relative group text-center p-2 sm:p-3 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10 backdrop-blur-sm hover:border-accent/50 transition-all duration-300"
               >
-                <stat.icon className="w-4 h-4 text-accent mb-2 mx-auto md:mx-0 animate-glow-pulse" style={{ animationDelay: `${index * 0.2}s` }} />
-                <p className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-accent">{stat.value}</p>
-                <p className="text-primary-foreground/70 text-[10px] sm:text-xs uppercase tracking-wider">{stat.label}</p>
+                <stat.icon className="w-3 h-3 sm:w-4 sm:h-4 text-accent mb-1 sm:mb-2 mx-auto animate-glow-pulse" style={{ animationDelay: `${index * 0.2}s` }} />
+                <p className="font-display text-lg sm:text-2xl md:text-3xl font-bold text-accent">{stat.value}</p>
+                <p className="text-primary-foreground/70 text-[9px] sm:text-xs uppercase tracking-wider leading-tight">{stat.label}</p>
               </div>
             ))}
           </div>

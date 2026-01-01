@@ -229,7 +229,7 @@ const ContactSection = () => {
                   </div>
                   <p className="font-semibold text-foreground mb-1">{info.title}</p>
                   {info.href ? (
-                    <a href={info.href} className="text-muted-foreground hover:text-accent transition-colors text-sm">
+                    <a href={info.href} className="text-muted-foreground hover:text-accent transition-colors text-sm break-all">
                       {info.content}
                     </a>
                   ) : (
