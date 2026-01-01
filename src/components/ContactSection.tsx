@@ -40,8 +40,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    content: "info@avdtraffic.com.au",
-    href: "mailto:info@avdtraffic.com.au",
+    content: "inquiry.avdtraffic@gmail.com",
+    href: "mailto:inquiry.avdtraffic@gmail.com",
   },
   {
     icon: MapPin,

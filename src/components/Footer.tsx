@@ -114,11 +114,11 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="mailto:info@avdtraffic.com.au" className="flex items-start gap-3 group">
+                <a href="mailto:inquiry.avdtraffic@gmail.com" className="flex items-start gap-3 group">
                   <div className="w-8 h-8 bg-primary-foreground/10 rounded-lg flex items-center justify-center group-hover:bg-accent transition-all duration-300">
                     <Mail className="w-4 h-4 text-accent group-hover:text-accent-foreground transition-colors" />
                   </div>
-                  <span className="text-primary-foreground/80 group-hover:text-accent transition-colors text-sm mt-1">info@avdtraffic.com.au</span>
+                  <span className="text-primary-foreground/80 group-hover:text-accent transition-colors text-sm mt-1">inquiry.avdtraffic@gmail.com</span>
                 </a>
               </li>
               <li className="flex items-start gap-3">
