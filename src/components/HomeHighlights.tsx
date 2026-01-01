@@ -21,8 +21,8 @@ const services = [
 ];
 
 const stats = [
-  { value: "15+", label: "Years Experience" },
-  { value: "500+", label: "Projects Done" },
+  { value: "1+", label: "Years Experience" },
+  { value: "5+", label: "Projects Done" },
   { value: "100%", label: "Safety Record" },
 ];
 
@@ -125,14 +125,14 @@ const HomeHighlights = () => {
                 AVDhut Group of Company brings years of expertise to Adelaide's traffic management industry with certified professionals and state-of-the-art equipment.
               </p>
 
-              <div className="grid grid-cols-3 gap-4 mb-6">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-6">
                 {stats.map((stat, index) => (
                   <div 
                     key={stat.label}
-                    className="text-center p-3 rounded-xl bg-background/50 border border-border group-hover:border-accent/30 transition-all duration-300"
+                    className="text-center p-2 sm:p-3 rounded-xl bg-background/50 border border-border group-hover:border-accent/30 transition-all duration-300"
                   >
-                    <p className="font-display text-xl sm:text-2xl font-bold text-accent">{stat.value}</p>
-                    <p className="text-xs text-muted-foreground uppercase tracking-wider">{stat.label}</p>
+                    <p className="font-display text-lg sm:text-2xl font-bold text-accent">{stat.value}</p>
+                    <p className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-wider leading-tight">{stat.label}</p>
                   </div>
                 ))}
               </div>
