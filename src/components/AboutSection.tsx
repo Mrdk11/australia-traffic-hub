@@ -14,9 +14,9 @@ const features = [
 ];
 
 const stats = [
-  { value: "15+", label: "Years Experience" },
-  { value: "500+", label: "Projects Done" },
-  { value: "50+", label: "Team Members" },
+  { value: "1+", label: "Years Experience" },
+  { value: "5+", label: "Projects Done" },
+  { value: "10+", label: "Team Members" },
   { value: "100%", label: "Safety Record" },
 ];
 
@@ -142,17 +142,17 @@ const AboutSection = () => {
               {/* Glow effect */}
               <div className="absolute -top-20 -right-20 w-40 h-40 bg-accent/30 rounded-full blur-[60px]" />
               
-              <div className="relative z-10 grid grid-cols-2 gap-4">
+              <div className="relative z-10 grid grid-cols-2 gap-3 sm:gap-4">
                 {stats.map((stat, index) => (
                   <div 
                     key={stat.label}
-                    className="bg-primary-foreground/10 rounded-xl p-4 sm:p-5 text-center border border-primary-foreground/10 hover:border-accent/50 transition-all duration-300 hover:shadow-glow"
+                    className="bg-primary-foreground/10 rounded-xl p-3 sm:p-5 text-center border border-primary-foreground/10 hover:border-accent/50 transition-all duration-300 hover:shadow-glow"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <p className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-accent animate-glow-pulse" style={{ animationDelay: `${index * 0.2}s` }}>
+                    <p className="font-display text-xl sm:text-3xl md:text-4xl font-bold text-accent animate-glow-pulse" style={{ animationDelay: `${index * 0.2}s` }}>
                       {stat.value}
                     </p>
-                    <p className="text-xs sm:text-sm text-primary-foreground/80 uppercase tracking-wider mt-1">
+                    <p className="text-[10px] sm:text-sm text-primary-foreground/80 uppercase tracking-wider mt-1 leading-tight">
                       {stat.label}
                     </p>
                   </div>
