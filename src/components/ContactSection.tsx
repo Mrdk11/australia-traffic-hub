@@ -9,7 +9,12 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { useToast } from "@/hooks/use-toast";
 import trafficController from "@/assets/traffic-controller.jpg";
+
+// ⚠️ REPLACE THIS WITH YOUR WEB3FORMS ACCESS KEY
+// Get your free access key at: https://web3forms.com
+const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
 
 const contactSchema = z.object({
   name: z.string().trim().min(2, "Name must be at least 2 characters").max(100, "Name must be less than 100 characters"),
@@ -51,6 +56,7 @@ const contactInfo = [
 ];
 
 const ContactSection = () => {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -84,13 +90,45 @@ const ContactSection = () => {
     setErrors({});
     setIsSubmitting(true);
     
-    // Simulate processing delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setSubmittedName(formData.name);
-    setFormData({ name: "", email: "", phone: "", message: "" });
-    setIsSubmitting(false);
-    setShowSuccessModal(true);
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `New Contact Inquiry from ${formData.name}`,
+          from_name: "AVD Traffic Website",
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || "Not provided",
+          message: formData.message,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmittedName(formData.name);
+        setFormData({ name: "", email: "", phone: "", message: "" });
+        setShowSuccessModal(true);
+      } else {
+        toast({
+          title: "Failed to send message",
+          description: "Please try again or contact us directly by phone.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Network error",
+        description: "Please check your connection and try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
