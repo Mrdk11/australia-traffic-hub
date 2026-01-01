@@ -14,7 +14,7 @@ import trafficController from "@/assets/traffic-controller.jpg";
 
 // ⚠️ REPLACE THIS WITH YOUR WEB3FORMS ACCESS KEY
 // Get your free access key at: https://web3forms.com
-const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+const WEB3FORMS_ACCESS_KEY = "6554c1a3-8732-4b35-b113-e95a1b072017";
 
 const contactSchema = z.object({
   name: z.string().trim().min(2, "Name must be at least 2 characters").max(100, "Name must be less than 100 characters"),
