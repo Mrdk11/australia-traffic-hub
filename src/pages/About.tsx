@@ -13,6 +13,7 @@ const About = () => {
           name="description"
           content="Learn about AVD Traffic Solutions - your trusted traffic management partner in Adelaide. Professional, certified team delivering safe traffic control solutions across South Australia."
         />
+        <meta name="keywords" content="traffic management Adelaide, traffic control company Adelaide, professional traffic controllers SA, certified traffic management, work zone safety experts" />
         <link rel="canonical" href="https://avdtraffic.com.au/about" />
       </Helmet>
       <Header />
