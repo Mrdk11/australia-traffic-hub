@@ -5,10 +5,19 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>AVD Traffic Solutions | Professional Traffic Management Adelaide</title>
+        <meta
+          name="description"
+          content="Expert traffic control and management services across Adelaide and South Australia. Certified traffic controllers, road closures, and event traffic management. Call 1300 283 832."
+        />
+        <link rel="canonical" href="https://avdtraffic.com.au/" />
+      </Helmet>
       <Header />
       <PageTransition>
         <main>
