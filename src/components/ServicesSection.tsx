@@ -6,7 +6,10 @@ import {
   FileCheck, 
   Truck,
   AlertTriangle,
-  Signpost
+  Signpost,
+  Moon,
+  Hand,
+  Siren
 } from "lucide-react";
 import trafficEquipment from "@/assets/traffic-equipment.jpg";
 
@@ -40,6 +43,21 @@ const services = [
     icon: Truck,
     title: "Equipment Hire",
     description: "Full range of traffic control equipment including signs, cones, barriers, and VMS boards.",
+  },
+  {
+    icon: Moon,
+    title: "Night Traffic Control",
+    description: "Specialized 24/7 night shift traffic control services with high-visibility equipment and trained personnel for after-hours roadworks.",
+  },
+  {
+    icon: Hand,
+    title: "Stop/Slow Bat Control",
+    description: "Certified traffic controllers with stop/slow bat operations ensuring safe vehicle and pedestrian movement through active work zones.",
+  },
+  {
+    icon: Siren,
+    title: "Emergency Traffic Control",
+    description: "Rapid response emergency traffic management for accidents, road hazards, and urgent situations requiring immediate deployment.",
   },
 ];
 
