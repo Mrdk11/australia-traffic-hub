@@ -11,8 +11,9 @@ const Services = () => {
         <title>Traffic Management Services | AVD Traffic Solutions Adelaide</title>
         <meta
           name="description"
-          content="Comprehensive traffic control services including road closures, event management, construction site traffic control, and traffic management plans in Adelaide SA."
+          content="Comprehensive traffic control services in Adelaide including work zone traffic control, night traffic control, emergency traffic control, stop slow bat operations, event traffic management, and traffic control for roadworks in SA."
         />
+        <meta name="keywords" content="traffic control services Adelaide, work zone traffic control, night traffic control services, event traffic control and management, stop slow bat traffic control, emergency traffic control, traffic control for roadworks, traffic management Adelaide" />
         <link rel="canonical" href="https://avdtraffic.com.au/services" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -108,6 +109,51 @@ const Services = () => {
                   "name": "South Australia"
                 },
                 "serviceType": "Equipment Hire"
+              },
+              {
+                "@type": "Service",
+                "position": 7,
+                "name": "Night Traffic Control Services",
+                "description": "Specialized night-time traffic control operations with proper lighting, high-visibility equipment, and trained night shift controllers.",
+                "provider": {
+                  "@type": "LocalBusiness",
+                  "name": "AVD Traffic Solutions"
+                },
+                "areaServed": {
+                  "@type": "State",
+                  "name": "South Australia"
+                },
+                "serviceType": "Night Traffic Control"
+              },
+              {
+                "@type": "Service",
+                "position": 8,
+                "name": "Stop Slow Bat Traffic Control",
+                "description": "Professional stop slow bat operators for roadworks, construction sites, and temporary traffic control situations.",
+                "provider": {
+                  "@type": "LocalBusiness",
+                  "name": "AVD Traffic Solutions"
+                },
+                "areaServed": {
+                  "@type": "State",
+                  "name": "South Australia"
+                },
+                "serviceType": "Stop Slow Bat Traffic Control"
+              },
+              {
+                "@type": "Service",
+                "position": 9,
+                "name": "Emergency Traffic Control",
+                "description": "24/7 emergency traffic control response for accidents, road hazards, and urgent traffic management situations.",
+                "provider": {
+                  "@type": "LocalBusiness",
+                  "name": "AVD Traffic Solutions"
+                },
+                "areaServed": {
+                  "@type": "State",
+                  "name": "South Australia"
+                },
+                "serviceType": "Emergency Traffic Control"
               }
             ]
           })}
