@@ -11,7 +11,7 @@ const Contact = () => {
         <title>Contact Us | AVD Traffic Solutions Adelaide</title>
         <meta
           name="description"
-          content="Get in touch with AVD Traffic Solutions for all your traffic management needs. Call 1300 283 832 or email inquiry.avdtraffic@gmail.com. Serving Adelaide and SA."
+          content="Get in touch with AVD Traffic Solutions for all your traffic management needs. Call 1300 283 823 or email inquiry.avdtraffic@gmail.com. Serving Adelaide and SA."
         />
         <meta name="keywords" content="contact traffic management Adelaide, traffic control quote Adelaide, hire traffic controllers SA, traffic management services enquiry" />
         <link rel="canonical" href="https://avdtraffic.com.au/contact" />

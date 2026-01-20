@@ -106,11 +106,11 @@ const Footer = () => {
             </h4>
             <ul className="space-y-4">
               <li>
-                <a href="tel:1300283832" className="flex items-start gap-3 group">
+                <a href="tel:1300283823" className="flex items-start gap-3 group">
                   <div className="w-8 h-8 bg-primary-foreground/10 rounded-lg flex items-center justify-center group-hover:bg-accent transition-all duration-300">
                     <Phone className="w-4 h-4 text-accent group-hover:text-accent-foreground transition-colors" />
                   </div>
-                  <span className="text-primary-foreground/80 group-hover:text-accent transition-colors text-sm mt-1">1300 283 832</span>
+                  <span className="text-primary-foreground/80 group-hover:text-accent transition-colors text-sm mt-1">1300 283 823</span>
                 </a>
               </li>
               <li>
