@@ -8,13 +8,13 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Traffic Management Services | AVD Traffic Solutions Adelaide</title>
+        <title>Traffic Control Services Adelaide | AVD Traffic Solutions SA</title>
         <meta
           name="description"
-          content="Comprehensive traffic control services in Adelaide including work zone traffic control, night traffic control, emergency traffic control, stop slow bat operations, event traffic management, and traffic control for roadworks in SA."
+          content="Comprehensive traffic control services in Adelaide by SA's #1 traffic management company. Work zone traffic control, night traffic control, emergency response, stop slow bat operations, event traffic management, and roadworks traffic control."
         />
-        <meta name="keywords" content="traffic control services Adelaide, work zone traffic control, night traffic control services, event traffic control and management, stop slow bat traffic control, emergency traffic control, traffic control for roadworks, traffic management Adelaide" />
-        <link rel="canonical" href="https://avdtraffic.com.au/services" />
+        <meta name="keywords" content="Adelaide traffic control services, traffic management services Adelaide, work zone traffic control Adelaide, night traffic control services SA, event traffic control Adelaide, stop slow bat traffic control, emergency traffic control South Australia, traffic control for roadworks Adelaide, road closure services Adelaide, traffic management plans SA, construction traffic management Adelaide, festival traffic management, highway traffic control SA, DPTI approved traffic controllers Adelaide" />
+        <link rel="canonical" href="https://www.avdtraffic.com.au/services" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

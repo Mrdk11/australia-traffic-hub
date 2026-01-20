@@ -8,12 +8,13 @@ const FAQ = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Frequently Asked Questions | AVD Traffic Solutions</title>
+        <title>Traffic Management FAQ Adelaide | AVD Traffic Solutions</title>
         <meta
           name="description"
-          content="Find answers to common questions about traffic management services, permits, pricing, and how AVD Traffic Solutions can help your project in Adelaide."
+          content="Find answers to common questions about traffic management services in Adelaide. Learn about DPTI certified controllers, traffic control permits, TMP plans, and pricing from SA's leading traffic company."
         />
-        <link rel="canonical" href="https://avdtraffic.com.au/faq" />
+        <meta name="keywords" content="traffic management FAQ Adelaide, traffic control questions SA, DPTI traffic controllers Adelaide, traffic management plans FAQ, traffic permit Adelaide, roadworks traffic control questions, event traffic management Adelaide FAQ" />
+        <link rel="canonical" href="https://www.avdtraffic.com.au/faq" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

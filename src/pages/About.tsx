@@ -8,13 +8,13 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>About Us | AVD Traffic Solutions - Adelaide Traffic Experts</title>
+        <title>About Us | AVD Traffic Solutions - SA's Leading Traffic Management Team</title>
         <meta
           name="description"
-          content="Learn about AVD Traffic Solutions - your trusted traffic management partner in Adelaide. Professional, certified team delivering safe traffic control solutions across South Australia."
+          content="Meet the team behind AVD Traffic Solutions - South Australia's #1 traffic management company. Founded by Urmil Patel & Meet Patel, delivering expert traffic control services across Adelaide and SA."
         />
-        <meta name="keywords" content="traffic management Adelaide, traffic control company Adelaide, professional traffic controllers SA, certified traffic management, work zone safety experts" />
-        <link rel="canonical" href="https://avdtraffic.com.au/about" />
+        <meta name="keywords" content="Urmil Patel, Meet Patel, AVD Traffic team, Adelaide traffic management company, traffic control company Adelaide, professional traffic controllers SA, certified traffic management Adelaide, work zone safety experts, SA traffic management leaders, AVDhut Group" />
+        <link rel="canonical" href="https://www.avdtraffic.com.au/about" />
       </Helmet>
       <Header />
       <PageTransition>
