@@ -8,13 +8,13 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Contact Us | AVD Traffic Solutions Adelaide</title>
+        <title>Contact AVD Traffic Solutions | Adelaide Traffic Management</title>
         <meta
           name="description"
-          content="Get in touch with AVD Traffic Solutions for all your traffic management needs. Call 1300 283 823 or email inquiry.avdtraffic@gmail.com. Serving Adelaide and SA."
+          content="Contact SA's #1 traffic management company. Get a free quote for traffic control services Adelaide. Call 1300 283 823 or email inquiry.avdtraffic@gmail.com. 24/7 emergency response available."
         />
-        <meta name="keywords" content="contact traffic management Adelaide, traffic control quote Adelaide, hire traffic controllers SA, traffic management services enquiry" />
-        <link rel="canonical" href="https://avdtraffic.com.au/contact" />
+        <meta name="keywords" content="contact traffic management Adelaide, traffic control quote Adelaide, hire traffic controllers SA, traffic management services enquiry Adelaide, emergency traffic control contact, roadworks traffic control Adelaide quote, event traffic management quote SA" />
+        <link rel="canonical" href="https://www.avdtraffic.com.au/contact" />
       </Helmet>
       <Header />
       <PageTransition>

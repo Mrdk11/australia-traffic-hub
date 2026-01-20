@@ -8,12 +8,13 @@ const Projects = () => {
   return (
     <PageTransition>
       <Helmet>
-        <title>Our Projects | AVD Traffic Solutions</title>
+        <title>Traffic Management Projects Adelaide | AVD Traffic Solutions</title>
         <meta
           name="description"
-          content="View our completed traffic management projects across Adelaide and South Australia. See examples of road closures, event management, and construction site traffic control."
+          content="View successful traffic management projects across Adelaide and South Australia. Road closures, event traffic control, construction site management, and highway traffic control by SA's leading traffic company."
         />
-        <link rel="canonical" href="https://avdtraffic.com.au/projects" />
+        <meta name="keywords" content="traffic management projects Adelaide, traffic control examples SA, road closure projects Adelaide, event traffic management portfolio, construction traffic control Adelaide, highway traffic control projects SA, roadworks traffic management Adelaide" />
+        <link rel="canonical" href="https://www.avdtraffic.com.au/projects" />
       </Helmet>
       <Header />
       <main className="pt-28 sm:pt-32">
