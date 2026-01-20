@@ -176,7 +176,7 @@ const HomeHighlights = () => {
                 <div className="flex flex-wrap items-center gap-4 text-primary-foreground/80 text-sm">
                   <div className="flex items-center gap-2">
                     <Phone className="w-4 h-4 text-accent" />
-                    <span>+61 4 1234 5678</span>
+                    <span>1300 283 823</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Clock className="w-4 h-4 text-accent" />

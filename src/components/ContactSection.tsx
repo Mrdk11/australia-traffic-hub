@@ -34,8 +34,8 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    content: "1300 283 832",
-    href: "tel:1300283832",
+    content: "1300 283 823",
+    href: "tel:1300283823",
   },
   {
     icon: Mail,
@@ -159,9 +159,9 @@ const ContactSection = () => {
           <div className="mt-6 space-y-3">
             <div className="p-4 rounded-xl bg-accent/5 border border-accent/10">
               <p className="text-sm text-muted-foreground text-center">
-                For urgent matters, call us directly at{" "}
-                <a href="tel:1300283832" className="text-accent font-semibold hover:underline">
-                  1300 283 832
+              For urgent matters, call us directly at{" "}
+                <a href="tel:1300283823" className="text-accent font-semibold hover:underline">
+                  1300 283 823
                 </a>
               </p>
             </div>

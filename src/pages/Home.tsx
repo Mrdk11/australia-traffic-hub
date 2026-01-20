@@ -14,7 +14,7 @@ const Home = () => {
         <title>AVD Traffic Solutions | Professional Traffic Management Adelaide</title>
         <meta
           name="description"
-          content="Expert traffic control and management services across Adelaide and South Australia. Work zone traffic control, night traffic services, emergency traffic control, stop slow bat operations, and event traffic management. Call 1300 283 832."
+          content="Expert traffic control and management services across Adelaide and South Australia. Work zone traffic control, night traffic services, emergency traffic control, stop slow bat operations, and event traffic management. Call 1300 283 823."
         />
         <meta name="keywords" content="traffic management, traffic control services Adelaide, traffic management Adelaide, work zone traffic control, night traffic control services, event traffic control, stop slow bat traffic control, emergency traffic control, traffic control for roadworks" />
         <link rel="canonical" href="https://avdtraffic.com.au/" />
