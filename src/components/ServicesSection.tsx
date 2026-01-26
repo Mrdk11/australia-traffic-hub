@@ -4,7 +4,6 @@ import {
   Shield, 
   Users, 
   FileCheck, 
-  Truck,
   AlertTriangle,
   Signpost,
   Moon,
@@ -38,11 +37,6 @@ const services = [
     icon: Users,
     title: "Event Traffic Management",
     description: "Specialized traffic solutions for festivals, sports events, concerts, and public gatherings.",
-  },
-  {
-    icon: Truck,
-    title: "Equipment Hire",
-    description: "Full range of traffic control equipment including signs, cones, barriers, and VMS boards.",
   },
   {
     icon: Moon,

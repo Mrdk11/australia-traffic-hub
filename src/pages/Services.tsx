@@ -97,21 +97,6 @@ const Services = () => {
               },
               {
                 "@type": "Service",
-                "position": 6,
-                "name": "Equipment Hire",
-                "description": "Full range of traffic control equipment including signs, cones, barriers, and VMS boards.",
-                "provider": {
-                  "@type": "LocalBusiness",
-                  "name": "AVD Traffic Solutions"
-                },
-                "areaServed": {
-                  "@type": "State",
-                  "name": "South Australia"
-                },
-                "serviceType": "Equipment Hire"
-              },
-              {
-                "@type": "Service",
                 "position": 7,
                 "name": "Night Traffic Control Services",
                 "description": "Specialized night-time traffic control operations with proper lighting, high-visibility equipment, and trained night shift controllers.",
